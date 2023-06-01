@@ -65,6 +65,7 @@ int	myprintf(const char *s, ...)
 	va_start(args, s);
 	print_format_string(s, print, args);
 	va_end(args);
+	int chars_printed = print->chars_printed;
 	free(print);
-	return (print->chars_printed);
+	return (chars_printed);
 }
